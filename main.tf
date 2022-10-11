@@ -12,4 +12,6 @@ terraform {
 
 resource "null_resource" "test" {}
 
+resource "null_resource" "test_2" {}
+
 resource "null_resource" "test_3" {}
