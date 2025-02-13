@@ -1,15 +1,8 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      configuration_aliases = [
-        aws.backup,
-        aws.prod
-      ]
-    }
-  }
+variable "greeting" {
+  type    = string
+  default = "Hello, Terraform!"
 }
 
-resource "null_resource" "test_1" {}
-
-resource "null_resource" "test_2" {}
+output "message" {
+  value = var.greeting
+}
